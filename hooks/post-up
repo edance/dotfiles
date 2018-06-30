@@ -4,6 +4,9 @@ touch "$HOME"/.psqlrc.local
 
 reset -Q
 
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # detect old OS X broken /etc/zshenv and suggest rename
 if grep -qw path_helper /etc/zshenv 2>/dev/null; then
   dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
