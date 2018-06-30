@@ -1,7 +1,7 @@
 edance dotfiles
 ===================
 
-Image goes here
+![Spacemacs](https://raw.githubusercontent.com/edance/dotfiles/master/images/emacs.png)
 
 Requirements
 ------------
@@ -9,6 +9,15 @@ Requirements
 Set zsh as your login shell:
 
     chsh -s $(which zsh)
+
+Install spacemacs:
+
+    git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+Install hyper:
+
+    brew update
+    brew cask install hyper
 
 Install
 -------
@@ -59,6 +68,8 @@ and update often!
 zsh Configurations
 ------------------
 
+![Hyper](https://raw.githubusercontent.com/edance/dotfiles/master/images/hyper.png)
+
 Additional zsh configuration can go under the `~/dotfiles-local/zsh/configs` directory. This
 has two special subdirectories: `pre` for files that must be loaded first, and
 `post` for files that must be loaded last.
@@ -90,9 +101,8 @@ What's in it?
 -------------
 [git](http://git-scm.com/) configuration:
 
-* Adds a `create-branch` alias to create feature branches.
-* Adds a `delete-branch` alias to delete feature branches.
-* Adds a `merge-branch` alias to merge feature branches into master.
+* Adds `gco` for checkout
+* Adds `gst` for status
 * Adds an `up` alias to fetch and rebase `origin/master` into the feature
   branch. Use `git up -i` for interactive rebases.
 * Adds `post-{checkout,commit,merge}` hooks to re-index your ctags.
@@ -107,6 +117,8 @@ What's in it?
 
 Shell aliases and scripts:
 
+* `rs` for `rails server`
+* `rc` for `rails console`
 * `b` for `bundle`.
 * `g` with no arguments is `git status` and with arguments acts like `git`.
 * `migrate` for `rake db:migrate && rake db:rollback && rake db:migrate`.
@@ -114,33 +126,3 @@ Shell aliases and scripts:
 * `replace foo bar **/*.rb` to find and replace within a given list of files.
 * `v` for `$VISUAL`.
 
-Thanks
-------
-
-Thank you, [contributors](https://github.com/thoughtbot/dotfiles/contributors)!
-Also, thank you to Corey Haines, Gary Bernhardt, and others for sharing your
-dotfiles and other shell scripts from which we derived inspiration for items
-in this project.
-
-License
--------
-
-dotfiles is copyright © 2009-2018 thoughtbot. It is free software, and may be
-redistributed under the terms specified in the [`LICENSE`] file.
-
-[`LICENSE`]: /LICENSE
-
-About thoughtbot
-----------------
-
-![thoughtbot](http://presskit.thoughtbot.com/images/thoughtbot-logo-for-readmes.svg)
-
-dotfiles is maintained and funded by thoughtbot, inc.
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
-
-We love open source software!
-See [our other projects][community].
-We are [available for hire][hire].
-
-[community]: https://thoughtbot.com/community?utm_source=github
-[hire]: https://thoughtbot.com/hire-us?utm_source=github
