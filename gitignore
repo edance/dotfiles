@@ -3,11 +3,13 @@
 .bundle
 .byebug_history
 .env
+.python-version
 db/*.sqlite3
 log/*.log
 rerun.txt
 tags
 !tags/
+TODOs.org
 tmp/**/*
 !tmp/cache/.keep
 *.pyc
